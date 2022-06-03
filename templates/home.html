@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meen</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <!--未完ルーム入室フォーム-->
+    <form method="post" action="{{url_for('enter_the_room')}}">
+        <div class="form1">
+            <input type="text" name="room_id">
+        </div>
+        <div class="btn1" >
+            <input type="submit" value="入室">
+        </div>
+    </form>
+    <!--未完ルーム作成フォーム-->
+    <form method="post" action="{{url_for('room_create')}}">
+        <div class="form1">
+            <input type="text" name="room_name">
+        </div>
+        <div class="btn1">
+            <input type="submit" value="作成">
+        </div>
+    </form>
+</body>
+</html>
